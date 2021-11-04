@@ -8,46 +8,43 @@ import SearchIcon from '@mui/icons-material/Search';
 import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { border, borderColor, } from '@mui/system';
 
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  padding: theme.spacing(3),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
 
 export default function BasicGrid() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={2}>
-          <Item><img className="" style={{width : "10rem"}} src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png" alt="" srcset="" /></Item>
+    
+      <Grid container spacing={0} className="parent">
+        <Grid item xs={2} className="child_6">
+          <div><img className="" style={{ width: "12rem" }} src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png" alt="" srcset="" /></div>
         </Grid>
-        <Grid item xs={6}>
-          <Item>
-              <select name="" id="">
-                  <option value="">Products</option>
-                  <option value="">Suppliers</option>
-              </select>
-              <input type="text" value="What are you looking for..."/> <CameraAltOutlinedIcon />
-              <Button variant="outlined" startIcon={<SearchIcon />}>
-        Search
-      </Button>
-          </Item>
+        <Grid item xs={7}>
+          <div className="child_1">
+            <select name="" id="" className="child_5 ">
+              <option value="">Products</option>
+              <option value="">Suppliers</option>
+            </select>
+            <input className="child_2" type="text" placeholder="What are you looking for..." />
+            <CameraAltOutlinedIcon sx={{ height: "40px",width:"2rem", color:"gray", marginBottom:"3px",paddingRight:"7px", border: "2px solid orangered", borderLeft:"none" }} />
+            <Button className="child_3" sx={{color:"white", height: "40px",width:"8rem",marginBottom:"3px", background: "#ff6f00", border: "orangered", borderBottomRightRadius: "50px", borderTopRightRadius:"50px" }} variant="outlined" startIcon={<SearchIcon />}>
+              Search
+            </Button>
+          </div>
         </Grid>
-        <Grid item xs={1}>
-          <Item><PersonOutlineOutlinedIcon /><p>Sign in <br/>Join free</p></Item>
+        <Grid item xs={1} className="child_4">
+          <div><PersonOutlineOutlinedIcon sx={{fontSize:"2.7rem", fontWeight:""}}/></div>
+          <div className="design_1"><p>Sign in <br />Join free</p></div>
         </Grid>
-        <Grid item xs={1}>
-          <Item><i class="fas fa-comment-alt-dots"></i><p>Messages</p></Item>
+        <Grid item xs={.5} className="child_">
+          <div  className="design_2"><i class="fas fa-comment-alt-dots"></i><p>Messages</p></div>
         </Grid>
-        <Grid item xs={1}>
-          <Item><i class="fas fa-hand-holding-usd"></i><p>Orders</p></Item>
+        <Grid item xs={.7} className="child_">
+          <div className="design_2"><i class="fas fa-hand-holding-usd"></i><p>Orders</p></div>
         </Grid>
-        <Grid item xs={1}>
-          <Item><ShoppingCartOutlinedIcon /><p>Cart</p></Item>
+        <Grid item xs={.3} className="child_">
+          <div className="design_2"><ShoppingCartOutlinedIcon /><p>Cart</p></div>
         </Grid>
       </Grid>
-    </Box>
+    
   );
 }

@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VisitNow from './myComponents/header';
-import BasicGrid from './myComponents/header_1';
+import AppRouter from './config/router';
+import { BrowserRouter } from 'react-router-dom'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="">
-        <VisitNow />
-        <BasicGrid />
-      </header>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
     </div>
   );
 }
