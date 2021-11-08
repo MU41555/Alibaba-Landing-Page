@@ -5,7 +5,7 @@ export default function NewArrival(props) {
         <>
             <Grid className="arrival">
 
-                <Grid xs={12}  className="arrivals_1 ">
+                <Grid item xs={12}  className="arrivals_1 ">
                     <Grid className="arrival_2">
                         <img src={props.img} alt="" /><span>{props.text}</span>
                     </Grid>

@@ -1,6 +1,14 @@
 import Grid from '@mui/material/Grid';
 import MySlider from '../myComponents/slider';
+import Consumer from './consumer';
+import Footer from './footer';
+import MyCard from './myCard';
+import MyDeals from './mydeals';
 import NewArrival from './newArrival';
+import NewArrival_1 from './newArrival_1';
+import Request from './requestPage';
+import Service from './service';
+import Supplier from './supplier';
 
 export default function MySection() {
     return (
@@ -91,7 +99,81 @@ export default function MySection() {
                         text_6={"1 Piece"}
                     />
                 </Grid>
+                <Grid className="mt-4 d-flex justify-content-center">
+                    <NewArrival_1 />
+                    <NewArrival_1 />
+                </Grid>
+                <Grid className="mt-4">
+                    <Consumer />
+                    <Consumer />
+                    <Consumer />
+                </Grid>
+                <Grid className="mt-4 deals_com">
+                    <MyDeals />
+                    <MyDeals />
+                    <MyDeals />
+                </Grid>
+                <Grid className="mt-4">
+                    <Request />
+                </Grid>
+                <Grid className="mt-4">
+                    <Grid className="text-white">
+                        <h3>JUST FOR YOU</h3><hr />
+                    </Grid>
+                    <Grid className="mt-4 myCard">
+                        <MyCard />
+                        <MyCard />
+                        <MyCard />
+                        <MyCard />
+                        <MyCard />
+                        <MyCard />
+                    </Grid>
+                    <Grid className="mt-4 myCard">
+                        <MyCard />
+                        <MyCard />
+                        <MyCard />
+                        <MyCard />
+                        <MyCard />
+                        <MyCard />
+                    </Grid>
+                </Grid>
+                <Grid className="mt-4">
+                    <Grid className="service_2">
+                        <h4>OUR TRADE SERVICES ARE HERE FOR YOU</h4>
+                        <p>Alibaba.com's trade services help ensure that your purchases are protected.</p>
+                    </Grid>
+                    <Grid className="mt-4 myService">
+                        <Service />
+                        <Service />
+                        <Service />
+                        <Service />
+                    </Grid>
+                </Grid>
+                <Grid className="">
+                    <Grid className="service_2">
+                        <h4>CHOOSE YOUR SUPPLIERS BY REGIONS</h4>
+                    </Grid>
+                    <Grid className="myService">
+                        <Supplier />
+                        <Supplier />
+                        <Supplier />
+                        <Supplier />
+                        <Supplier />
+                        <Supplier />
+                        <Supplier />
+                        <Supplier />
+                        <Supplier />
+                        <p className="text-primary" style={{paddingTop:"20px"}}>More Regions</p>
+                    </Grid>
+                </Grid>
+                <Grid className="mt-5 align-items-center">
+                    <img style={{width:"1460px"}} src="https://i.alicdn.com/img/imgextra/i3/O1CN01g1wPLu1NaQsIkHE3s_!!6000000001586-2-tps-1500-60.png" />
+                </Grid>
+                <Grid className="mt-4">
+                    <Footer />
+                </Grid>
             </Grid>
+
         </>
     );
 }
