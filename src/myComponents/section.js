@@ -1,7 +1,6 @@
 import Grid from '@mui/material/Grid';
 import MySlider from '../myComponents/slider';
 import Consumer from './consumer';
-import Footer from './footer';
 import MyCard from './myCard';
 import MyDeals from './mydeals';
 import NewArrival from './newArrival';
@@ -9,8 +8,138 @@ import NewArrival_1 from './newArrival_1';
 import Request from './requestPage';
 import Service from './service';
 import Supplier from './supplier';
+import { newArrivalArray , newArrival_1Array , newarrivalArray , myServiceArray , mySupplierArray , myConsumerArray , myDealsArray, myCardArray, myCardArray_1} from './myArray';
 
 export default function MySection() {
+
+    function Newarrivals (val) {
+        return (
+            <NewArrival 
+                a = {val.text_1}
+                b = {val.img_1}
+                c = {val.img_2}
+                d = {val.img_3}
+                e = {val.img_4}
+                f = {val.text_2}
+                g = {val.text_3}
+                h = {val.text_4}
+                i = {val.price_1}
+                j = {val.price_2}
+                k = {val.price_3}
+            />
+        );
+    }
+
+    function NewArrivals (val) {
+        return (
+            <NewArrival 
+                a = {val.text_1}
+                b = {val.img_1}
+                c = {val.img_2}
+                d = {val.img_3}
+                e = {val.img_4}
+                f = {val.text_2}
+                g = {val.text_3}
+                h = {val.text_4}
+                i = {val.price_1}
+                j = {val.price_2}
+                k = {val.price_3}
+            />
+        );
+    }
+
+    function Newarrivals_1 (val) {
+        return (
+            <NewArrival_1 
+                text_1 = {val.a}
+                text_2 = {val.b}
+                text_3 = {val.c}
+                img_1 = {val.d}
+                img_2 = {val.e}
+                img_3 = {val.f}
+                img_4 = {val.g}
+                img_5 = {val.h}
+                img_6 = {val.i}
+                img_7 = {val.j}
+                text_4 = {val.k}
+                text_5 = {val.l}
+            />
+        );
+    }
+
+    function myConsumer (val) {
+        return (
+            <Consumer 
+                img = {val.a}
+                img_1 = {val.b}
+                img_2 = {val.c}
+                img_3 = {val.d}
+                img_4 = {val.e}
+                img_5 = {val.f}
+                img_6 = {val.g}
+                img_7 = {val.h}
+                img_8 = {val.i}
+                img_9 = {val.j}
+                img_10 = {val.k}
+                img_11 = {val.l}
+                img_12 = {val.m}
+                text1 = {val.n}
+                text2 = {val.o}
+                text3 = {val.p}
+                text4 = {val.q}
+                text5 = {val.r}
+                text6 = {val.s}
+                text7 = {val.t}
+                text8 = {val.u}
+                text9 = {val.v}
+            />
+        );
+    }
+
+    function myDeals (val) {
+        return (
+            <MyDeals 
+                text = {val.a}
+                img = {val.b}
+                img_1 = {val.c}
+                text_1 = {val.d}
+                text_2 = {val.e}
+            />
+        );
+    }
+
+    function myCard (val) {
+        return (
+            <MyCard 
+            img = {val.a}
+            text = {val.b}
+            text1 = {val.c}
+            text2 = {val.d}
+            />
+        );
+    }
+
+    function myService (val) {
+        return (
+            <Service 
+                text_1 = {val.a}
+                text_2 = {val.b}
+                text_3 = {val.c}
+                img = {val.d}
+                imgs = {val.e}
+            />
+        );
+    }
+
+    function mySupplier (val) {
+        return (
+            <Supplier 
+                img = {val.a}
+                text = {val.b}
+            />
+        );
+    }
+
     return (
         <>
             <Grid className="section">
@@ -18,100 +147,19 @@ export default function MySection() {
                     <MySlider />
                 </Grid>
                 <Grid className="mt-4 d-flex justify-content-center">
-                    <NewArrival
-                        text={" New Arrivals"}
-                        img={"https://img.alicdn.com/tfs/TB1jyqhzy_1gK0jSZFqXXcpaXXa-44-44.png"}
-                        imgs={"https://s.alicdn.com/@sc04/kf/H995f41844a514e86aa69c01ec95cb8451.jpg_120x120.jpg"}
-                        text_1={"$4.59"}
-                        text_2={"Trending Now"}
-                        imgs_1={"https://s.alicdn.com/@sc04/kf/H7863b5a936ba4c9584a6a3a07fb11228p.jpg_120x120.jpg"}
-                        text_3={"$8.00"}
-                        text_4={"Trending Now"}
-                        imgs_2={"https://s.alicdn.com/@sc04/kf/H2ecbb140c379453b8b54b6d9676fc179o.jpg_120x120.jpg"}
-                        text_5={"$2.00"}
-                        text_6={"Trending Now"}
-                    />
-                    <NewArrival
-                        text={" Top-ranked Products"}
-                        img={"https://img.alicdn.com/tfs/TB1jyqhzy_1gK0jSZFqXXcpaXXa-44-44.png"}
-                        imgs={"https://s.alicdn.com/@sc04/kf/Hd70554d513594a089c09783fce08e55bD.jpg_120x120xz.jpg"}
-                        text_1={"$42.57"}
-                        text_2={"1 Piece"}
-                        imgs_1={"https://s.alicdn.com/@sc04/kf/H28c133f60ee04d9ea9ab653ef1ad5c52r.jpg_120x120xz.jpg"}
-                        text_3={"$6.97"}
-                        text_4={"1 Unit"}
-                        imgs_2={"https://s.alicdn.com/@sc04/kf/H6028d43b19ad48b0a487908a29644ed6R.jpg_120x120xz.jpg"}
-                        text_5={"$39.54"}
-                        text_6={"1 Piece"}
-                    />
-                    <NewArrival
-                        text={" Top-ranked Products"}
-                        img={"https://img.alicdn.com/tfs/TB1jyqhzy_1gK0jSZFqXXcpaXXa-44-44.png"}
-                        imgs={"https://s.alicdn.com/@sc04/kf/H0b935b0465964389a20b60191178ab93A.png_120x120xz.jpg"}
-                        text_1={"$9.50"}
-                        text_2={"1 Piece"}
-                        imgs_2={"https://s.alicdn.com/@sc04/kf/H8ac9f33c50624b9bbdaf3ad75847ab61W.jpg_120x120xz.jpg"}
-                        text_5={"$1.01"}
-                        text_4={"1 Unit"}
-                        imgs_1={"https://s.alicdn.com/@sc04/kf/H49c38e30fd8c48b4ac0a4c66aa3649c2O.jpg_120x120xz.jpg"}
-                        text_3={"$39.54"}
-                        text_6={"1 Piece"}
-                    />
+                    {newArrivalArray.map(Newarrivals)}
                 </Grid>
                 <Grid className="mt-4 d-flex justify-content-center">
-                    <NewArrival
-                        text={" Top-ranked Products"}
-                        img={"https://img.alicdn.com/tfs/TB1jyqhzy_1gK0jSZFqXXcpaXXa-44-44.png"}
-                        imgs={"https://s.alicdn.com/@sc04/kf/H53c8e34332694dcab73f0178470416da7.jpg_120x120xz.jpg"}
-                        text_1={"$42.57"}
-                        text_2={"1 Piece"}
-                        imgs_1={"https://s.alicdn.com/@sc04/kf/H90a7532d297b4d6abbe0dab380c1fbee4.jpg_120x120xz.jpg"}
-                        text_3={"$6.97"}
-                        text_4={"1 Unit"}
-                        imgs_2={"https://s.alicdn.com/@sc04/kf/H6028d43b19ad48b0a487908a29644ed6R.jpg_120x120xz.jpg"}
-                        text_5={"$39.54"}
-                        text_6={"1 Piece"}
-                    />
-                    <NewArrival
-                        text={" Top-ranked Products"}
-                        img={"https://img.alicdn.com/tfs/TB1jyqhzy_1gK0jSZFqXXcpaXXa-44-44.png"}
-                        imgs={"https://s.alicdn.com/@sc04/kf/Hd70554d513594a089c09783fce08e55bD.jpg_120x120xz.jpg"}
-                        text_1={"$42.57"}
-                        text_2={"1 Piece"}
-                        imgs_1={"https://s.alicdn.com/@sc04/kf/H28c133f60ee04d9ea9ab653ef1ad5c52r.jpg_120x120xz.jpg"}
-                        text_3={"$6.97"}
-                        text_4={"1 Unit"}
-                        imgs_2={"https://s.alicdn.com/@sc04/kf/H6028d43b19ad48b0a487908a29644ed6R.jpg_120x120xz.jpg"}
-                        text_5={"$39.54"}
-                        text_6={"1 Piece"}
-                    />
-                    <NewArrival
-                        text={" Top-ranked Products"}
-                        img={"https://img.alicdn.com/tfs/TB1jyqhzy_1gK0jSZFqXXcpaXXa-44-44.png"}
-                        imgs={"https://s.alicdn.com/@sc04/kf/Hd70554d513594a089c09783fce08e55bD.jpg_120x120xz.jpg"}
-                        text_1={"$42.57"}
-                        text_2={"1 Piece"}
-                        imgs_1={"https://s.alicdn.com/@sc04/kf/H28c133f60ee04d9ea9ab653ef1ad5c52r.jpg_120x120xz.jpg"}
-                        text_3={"$6.97"}
-                        text_4={"1 Unit"}
-                        imgs_2={"https://s.alicdn.com/@sc04/kf/H6028d43b19ad48b0a487908a29644ed6R.jpg_120x120xz.jpg"}
-                        text_5={"$39.54"}
-                        text_6={"1 Piece"}
-                    />
+                    {newarrivalArray.map(NewArrivals)}  
                 </Grid>
                 <Grid className="mt-4 d-flex justify-content-center">
-                    <NewArrival_1 />
-                    <NewArrival_1 />
+                    {newArrival_1Array.map(Newarrivals_1)}
                 </Grid>
                 <Grid className="mt-4">
-                    <Consumer />
-                    <Consumer />
-                    <Consumer />
+                    {myConsumerArray.map(myConsumer)}
                 </Grid>
                 <Grid className="mt-4 deals_com">
-                    <MyDeals />
-                    <MyDeals />
-                    <MyDeals />
+                    {myDealsArray.map(myDeals)}
                 </Grid>
                 <Grid className="mt-4">
                     <Request />
@@ -121,20 +169,10 @@ export default function MySection() {
                         <h3>JUST FOR YOU</h3><hr />
                     </Grid>
                     <Grid className="mt-4 myCard">
-                        <MyCard />
-                        <MyCard />
-                        <MyCard />
-                        <MyCard />
-                        <MyCard />
-                        <MyCard />
+                        {myCardArray.map(myCard)}
                     </Grid>
                     <Grid className="mt-4 myCard">
-                        <MyCard />
-                        <MyCard />
-                        <MyCard />
-                        <MyCard />
-                        <MyCard />
-                        <MyCard />
+                        {myCardArray_1.map(myCard)}
                     </Grid>
                 </Grid>
                 <Grid className="mt-4">
@@ -143,10 +181,7 @@ export default function MySection() {
                         <p>Alibaba.com's trade services help ensure that your purchases are protected.</p>
                     </Grid>
                     <Grid className="mt-4 myService">
-                        <Service />
-                        <Service />
-                        <Service />
-                        <Service />
+                        {myServiceArray.map(myService)}
                     </Grid>
                 </Grid>
                 <Grid className="">
@@ -154,23 +189,12 @@ export default function MySection() {
                         <h4>CHOOSE YOUR SUPPLIERS BY REGIONS</h4>
                     </Grid>
                     <Grid className="myService">
-                        <Supplier />
-                        <Supplier />
-                        <Supplier />
-                        <Supplier />
-                        <Supplier />
-                        <Supplier />
-                        <Supplier />
-                        <Supplier />
-                        <Supplier />
+                        {mySupplierArray.map(mySupplier)}
                         <p className="text-primary" style={{paddingTop:"20px"}}>More Regions</p>
                     </Grid>
                 </Grid>
                 <Grid className="mt-5 align-items-center">
                     <img style={{width:"1460px"}} src="https://i.alicdn.com/img/imgextra/i3/O1CN01g1wPLu1NaQsIkHE3s_!!6000000001586-2-tps-1500-60.png" />
-                </Grid>
-                <Grid className="mt-4">
-                    <Footer />
                 </Grid>
             </Grid>
 

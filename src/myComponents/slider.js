@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
+import OurSliders from './sliders_1';
 
 export default function MySlider() {
     return (
@@ -27,48 +28,7 @@ export default function MySlider() {
             </Grid>
             <Grid item xs={7} className="slider">
                 <Grid className="slider_1">
-                    <Grid id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-                        <Grid className="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            {/* <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button> */}
-                        </Grid>
-                        <Grid className="carousel-inner">
-                            <Grid className="carousel-item active">
-                                <img src="https://s.alicdn.com/@img/imgextra/i2/O1CN01UKsNwd1QnfAFepFwM_!!6000000002021-2-tps-990-400.png" className="d-block w-100 slider_img" alt="..." />
-                            </Grid>
-                            <Grid className="carousel-item">
-                                <img src="https://s.alicdn.com/@img/imgextra/i3/O1CN01QEL53b1ZNOzSa5hHT_!!6000000003182-0-tps-990-400.jpg" className="d-block w-100" alt="..." />
-                            </Grid>
-                            <Grid className="carousel-item">
-                                <img src="https://s.alicdn.com/@img/imgextra/i3/O1CN01VNUdjq1ftoijrNU7P_!!6000000004065-2-tps-990-400.png" className="d-block w-100" alt="..." />
-                            </Grid>
-                            {/* <Grid className="carousel-item">
-                                <img src="https://s.alicdn.com/@img/tfs/TB1e.XyReL2gK0jSZFmXXc7iXXa-990-400.png" className="d-block w-100" alt="..." />
-                            </Grid>
-                            <Grid className="carousel-item">
-                                <img src="https://s.alicdn.com/@img/imgextra/i2/O1CN01tzlNNl28xaqEZItHA_!!6000000007999-0-tps-990-400.jpg" className="d-block w-100" alt="..." />
-                            </Grid>
-                            <Grid className="carousel-item">
-                                <img src="https://s.alicdn.com/@img/imgextra/i2/O1CN01eDYIeP1DSyFsa06Oi_!!6000000000216-0-tps-990-400.jpg" className="d-block w-100" alt="..." />
-                            </Grid>
-                            <Grid className="carousel-item">
-                                <img src="https://s.alicdn.com/@img/imgextra/i1/O1CN01aX23AE1uRABJ4InsG_!!6000000006033-0-tps-990-400.jpg" className="d-block w-100" alt="..." />
-                            </Grid> */}
-                        </Grid>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
-                    </Grid>
+                    <OurSliders />
                 </Grid>
             </Grid>
             <Grid item xs={2.4} className="list_5">
@@ -83,7 +43,7 @@ export default function MySlider() {
                 </Grid>
                 <Grid className="list_8">
                     <Grid className="list_9">
-                        <p>Home & Garden 2021 <br/> Online Trade Show</p> <img src="https://i.alicdn.com/img/imgextra/i3/O1CN01rHG3DG1wp66sdIKKe_!!6000000006356-2-tps-350-350.png_100x100.jpg" alt="" />
+                        <p>Home & Garden 2021 <br /> Online Trade Show</p> <img src="https://i.alicdn.com/img/imgextra/i3/O1CN01rHG3DG1wp66sdIKKe_!!6000000006356-2-tps-350-350.png_100x100.jpg" alt="" />
                     </Grid>
                     <Grid className="list_9">
                         <p>Digital Booths</p> <img src="https://i.alicdn.com/img/imgextra/i3/O1CN01i1pN3924J3K92CAMq_!!6000000007369-2-tps-350-350.png_100x100.jpg" alt="" />
@@ -94,6 +54,6 @@ export default function MySlider() {
                 </Grid>
             </Grid>
         </Grid>
-        
+
     );
 }

@@ -1,21 +1,21 @@
 import { Grid } from "@mui/material";
 import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
 
-export default function MyDeals() {
+export default function MyDeals(props) {
     return (
         <Grid className="text-white">
-            <Grid><span>WEEKLY DEALS</span><span><hr/></span></Grid>
-            <Grid className="bg-white deals">
+            <Grid className="deals"><span>{props.text}</span><span><hr/></span></Grid>
+            <Grid className="bg-white">
                 <Grid item xs={12}>
                     <Grid className="deals_1">
                         <Grid className="deals_2">
-                            <img src="https://s.alicdn.com/@sc04/kf/H4d252f2f1bb146bb8ba2f19d0599268de.jpg_220x220.jpg" alt="" />
+                            <img src={props.img} alt="" />
                             <p>View more <KeyboardArrowRightOutlinedIcon sx={{ color: "#bdbdbd" }} /></p>
                         </Grid>
                         <Grid className="deals_3">
-                            <img src="https://s.alicdn.com/@sc04/kf/H4d252f2f1bb146bb8ba2f19d0599268de.jpg_220x220.jpg" alt="" />
-                            <h5>$5.00</h5>
-                            <p>1 Piece (MOQ)</p>
+                            <img src={props.img_1} alt="" />
+                            <h5>{props.text_1}</h5>
+                            <p>{props.text_2}</p>
                         </Grid>
                     </Grid>
                 </Grid>

@@ -3,13 +3,13 @@ import Button from '@mui/material/Button';
 
 export default function Footer() {
     return (
-        <Grid className="bg-danger text-white text-center footer">
+        <Grid className="text-white text-center footer">
             <Grid className="footer_1">
                 <p>Trade Alert - Delivering the latest product trends and industry news straight to your inbox.</p>
             </Grid>
             <Grid className="footer_2 req_3">
-                    <input size="36" type="email" placeholder="Your email" name="" id="" /><Button variant="contained">Subscribe</Button>
-                    <p>We’ll never share your email address with a third-party.</p>
+                <input size="36" type="email" placeholder="Your email" name="" id="" /><Button variant="contained">Subscribe</Button>
+                <p>We’ll never share your email address with a third-party.</p>
             </Grid>
             <Grid className="footer_3">
                 <Grid className="footer_4">
@@ -61,7 +61,7 @@ export default function Footer() {
                 </Grid>
             </Grid>
             <Grid className="text-white"><br /></Grid>
-            <Grid>
+            <Grid className="footer_9">
                 <Grid>
                     <p>Download : </p>
                     <img src="" alt="" />
@@ -75,29 +75,29 @@ export default function Footer() {
                     <p>Follow Us : Facebook</p>
                 </Grid>
             </Grid>
-            <Grid>
-                <img src="https://s.alicdn.com/@g/sc/footer/0.0.4/sc-footer/src/vers1x.png" alt="" />
+            <Grid className="footer_6">
+                {/* <img src="https://s.alicdn.com/@g/sc/footer/0.0.4/sc-footer/src/vers1x.png" alt="" /> */}
                 <p> Alibaba.com Site: International - Español - Português - Deutsch - Français - Italiano - हिंदी - Pусский - 한국어 - 日本語 - اللغة العربية - ภาษาไทย - Türk - Nederlands - tiếng Việt - Indonesian - עברית</p>
             </Grid>
-            <Grid>
+            <Grid className="footer_6">
                 <p>Alibaba Group | Taobao Marketplace | Tmall.com | Juhuasuan | AliExpress | Alibaba.com | 1688.com | Alimama | Fliggy | Tmall Taobao World</p>
                 <p>Alibaba Cloud | AliOS | AliTelecom | Autonavi | UCWeb | Umeng | Xiami | DingTalk | Alipay | Lazada | Alibaba Security</p>
             </Grid>
-            <Grid>
+            <Grid className="footer_6">
                 <p>Browse Alphabetically: Onetouch | Showroom | Country Search | Suppliers | Affiliate</p>
             </Grid>
-            <Grid>
+            <Grid className="footer_6">
                 <p>Product Listing Policy - Intellectual Property Protection - Privacy Policy - Terms of Use - User Information Legal Enquiry Guide</p>
             </Grid>
-            <Grid>
-            <Grid>
-                <img src="https://img.alicdn.com/tfs/TB1VtZtebH1gK0jSZFwXXc7aXXa-65-70.gif" alt="" />
-                <p>© 1999-2021 Alibaba.com. All rights reserved.</p>
-            </Grid>
-            <Grid>
-                <img src="https://img.alicdn.com/tfs/TB1QhYprKT2gK0jSZFvXXXnFXXa-20-20.png" alt="" />
-                <p>浙公网安备 33010002000092号 浙B2-20120091-4</p>
-            </Grid>
+            <Grid className="footer_8">
+                <Grid className="footer_7">
+                    <img src="https://img.alicdn.com/tfs/TB1VtZtebH1gK0jSZFwXXc7aXXa-65-70.gif" alt="" />
+                    <p>© 1999-2021 Alibaba.com. All rights reserved.</p>
+                </Grid>
+                <Grid className="footer_7">
+                    <img src="https://img.alicdn.com/tfs/TB1QhYprKT2gK0jSZFvXXXnFXXa-20-20.png" alt="" />
+                    <p>浙公网安备 33010002000092号 浙B2-20120091-4</p>
+                </Grid>
             </Grid>
         </Grid>
     );

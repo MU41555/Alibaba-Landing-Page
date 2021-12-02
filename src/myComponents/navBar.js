@@ -1,41 +1,44 @@
-import { Link } from "react-router-dom";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+// import { NavLink } from "react-router-dom";
 
-export default function NavBar() {
+
+
+export default function NavBar_1() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/">Link</Link>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </Link>
-                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><Link className="dropdown-item" to="/">Action</Link></li>
-                                <li><Link className="dropdown-item" to="/">Another action</Link></li>
-                                <li><hr className="dropdown-divider" /></li>
-                                <li><Link className="dropdown-item" to="/">Something else here</Link></li>
-                            </ul>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link disabled">Disabled</Link>
-                        </li>
-                    </ul>
-                    <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button className="btn btn-outline-success" type ="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        <Navbar collapseOnSelect expand="lg" bg="white" >
+            <Container fluid className="mx-5 px-5">
+                <Navbar.Brand href="#home">Containers</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#features">Ready to Ship</Nav.Link>
+                        <Nav.Link href="#pricing">Personel Protective E..</Nav.Link>
+                        <Nav.Link href="#pricing">Trade Shows</Nav.Link>
+                        <NavDropdown title="Buyer Central" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Blog</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Trade Assurance</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Letter of Credit</NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Sell on Alibaba" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">For Global Seller</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">For Chinese Seller</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Partner Program</NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Help" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">For BUyers</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">For Suppliers</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Submit a Dispute</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Report IPR Infringement</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Report Abuse</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link href="#">Get the App</Nav.Link>
+                        <Nav.Link href="#">English-PKR</Nav.Link>
+                        <Nav.Link href="#">Ship to:</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
